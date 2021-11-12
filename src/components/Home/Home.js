@@ -2,8 +2,12 @@ import React from "react";
 import Row from "../Row/Row.js";
 import requests from "../../requests.js";
 import Banner from "../Banner/Banner";
+import { useEffect } from "react";
 
 export const Home = () => {
+  useEffect(() => {
+    document.title = "Netflix Homepage";
+  });
   return (
     <div>
       <Banner />

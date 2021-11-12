@@ -25,7 +25,7 @@ function Banner(props) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
   return loading ? (
-    <Skeleton variant="rectangular" height={448} sx={{bgcolor:'grey.900'}} />
+    <Skeleton variant="rectangular" height={448} sx={{ bgcolor: "grey.900" }} />
   ) : (
     <header
       className="banner"

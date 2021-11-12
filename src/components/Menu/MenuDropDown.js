@@ -6,8 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../LoginButton/LoginButton";
 import LogOutButton from "../LogoutButton/LogoutButton";
 import Profile from "../Profile/Profile.js";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 function MenuDropDown() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -54,10 +53,10 @@ function MenuDropDown() {
         }}
       >
         {isAuthenticated ? <Profile /> : null}
-        <MenuItem component={Link} to="/Settings">Settings</MenuItem>
-        <MenuItem component={Link} to="/About">About</MenuItem>
+
         {isAuthenticated ? <LogOutButton /> : <LoginButton />}
-        {isAuthenticated ? null : <MenuItem
+        {isAuthenticated ? null : (
+          <MenuItem
             onClick={() =>
               loginWithRedirect({
                 screen_hint: "signup",
@@ -66,7 +65,10 @@ function MenuDropDown() {
           >
             Sign Up
           </MenuItem>
-          }
+        )}
+        <MenuItem component={Link} to="/About">
+          About
+        </MenuItem>
       </Menu>
     </div>
   );

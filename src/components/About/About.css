@@ -1,0 +1,26 @@
+.about {
+  padding-top: 100px;
+  background-color: black;
+  height: 100%;
+}
+
+.about-header {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.about-text {
+  font-family: "Open Sans", sans-serif;
+  padding-left: 25%;
+  padding-bottom: 2rem;
+  color: white;
+  padding-top: 5rem;
+  width: 50%;
+}
+
+.media-photo {
+  padding-left: 25%;
+  padding-top: 5rem;
+  width: 50%;
+}
